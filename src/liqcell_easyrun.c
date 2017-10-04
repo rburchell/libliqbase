@@ -26,7 +26,7 @@
 #define LIQBASE_WALLMOUNT 1
 
 // 20090728_001621 lcuk : set this to have a 25fps limit to framerate, otherwise runs at fastest possible
-//#define LIMIT_FRAMERATE 1
+#define LIMIT_FRAMERATE 1
 
 #define ABS(x)  ((x)<0 ? -(x) : (x))
 #include <stdio.h>
@@ -2428,15 +2428,8 @@ moar:
 
 #endif
 			// 20090712_224448 lcuk : i want MAX 25fps, just to see
-			//ft2=liqapp_GetTicks();
 #ifdef LIMIT_FRAMERATE		
-			while( ( (ft2=liqapp_GetTicks()) - ft1) < 40)
-			{
-				// lets just sleep for a short while (doesnt have to be THAT precise, just stop silly speed overruns)
-				//liqapp_log("sleeping %i",100 - (ft2-ft1));
-				liqapp_sleep(40 - (ft2-ft1));
-			}
-			ft1=ft2;
+			liqapp_sleep_real(40);
 #endif
 
 

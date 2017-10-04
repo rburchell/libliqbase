@@ -3,10 +3,10 @@ VERS        = 0.3.0
 CC          = g++
 LD          = g++
 
-OPT_FLAGS   =  -O3 
+OPT_FLAGS   =  -O2
  
 
-USE_GST = 1
+USE_GST = 0
 
 
 UNAMEISARM := $(shell uname -m | grep arm)
@@ -17,7 +17,7 @@ ifeq ($(UNAMEISARM),arm)
 endif
 
 
-LIBRARIES   =  libpng12
+LIBRARIES   =  libpng16
 
 ifdef USE_OSSO
 	LIBRARIES += libosso

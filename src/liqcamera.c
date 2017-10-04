@@ -1,4 +1,4 @@
-
+#if 0
 // liqcamera : main camera interface
 // slightly cleaned up and duplicated also in liqcameraface
 // these should really be instances of the same class :$
@@ -259,3 +259,4 @@ void liqcamera_stop()
 }
 #endif
 
+#endif

@@ -88,7 +88,7 @@ struct liqcell
 	liqimage  *image;
 	liqfont   *font;
 	int dirty;							// the dirty flag is important, and should really be automatic
-	int tag;
+	intptr_t tag;
 	int dirtyhold;
 	char *caption;
 	

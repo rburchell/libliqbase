@@ -728,7 +728,7 @@ int liqcell_getselected(liqcell *self)
  */
 void liqcell_settag(liqcell *self,void *tag)
 {
-	self->tag=(int)tag;
+	self->tag=(intptr_t)tag;
 }
 
 /**

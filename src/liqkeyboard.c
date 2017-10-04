@@ -96,7 +96,7 @@ static int key_click(liqcell *self, liqcelleventargs *args,liqcell *keyboard)
 	liqapp_log("liqkeyboard: key click");
 	liqcellkeyeventargs keyargs={0};
 		
-	keyargs.keycode = (int)liqcell_gettag(self);
+	keyargs.keycode = (intptr_t)liqcell_gettag(self);
 	snprintf(keyargs.keystring,sizeof(keyargs.keystring),liqcell_getcaption(self));
 	keyargs.ispress = 1;
 	liqcell_handlerrun(keyboard,"keypress",&keyargs);

@@ -154,7 +154,7 @@ void * liqcell_propsetp(liqcell *self, const char *name,void * value)
 	if(!c) c = liqcell_child_insert(self, liqcell_quickcreatenameclass(name,"prop.p") );
 	if(c)
 	{
-		c->tag = (unsigned int)value;
+		c->tag = (intptr_t)value;
 	}
 	else
 	{
@@ -220,7 +220,7 @@ char *liqcell_propsets(liqcell *self, const char *name,char *value)
 	if(c)
 	{
 		if(c->tag) free((char *)c->tag);
-		c->tag = (unsigned int)strdup(value);
+		c->tag = (intptr_t)strdup(value);
 		// todo fix this memory leak.  not sure yet how to handle this.  it should release the memory on closure or change.
 		// there will be lots of these properties and efficient memory handling will be required.
 		// maybe by storing instances and references into the token tree i can save some		

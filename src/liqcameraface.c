@@ -1,3 +1,4 @@
+#if 0
 
 // liqcamerafaceface : face camera interface
 // slightly cleaned up duplicate of liqcameraface
@@ -282,3 +283,4 @@ void liqcameraface_stop()
 }
 #endif
 
+#endif

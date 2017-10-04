@@ -400,7 +400,8 @@ liqfont * liqfont_newfromfilettf(const char *name,int size,int rotation)
         	if(!liqapp_fileexists(name)) name="/usr/share/fonts/truetype/ttf-nokiapure/NokiaPure.ttf";
 		if(!liqapp_fileexists(name)) name="/usr/share/fonts/nokia/nosnr.ttf";
 		if(!liqapp_fileexists(name)) name="/usr/share/fonts/droid/DroidSans.ttf";
-		if(!liqapp_fileexists(name)) name="/usr/share/fonts/nokia/nosnb.ttf";
+        if(!liqapp_fileexists(name)) name="/usr/share/fonts/nokia/nosnb.ttf";
+        if(!liqapp_fileexists(name)) name="/usr/share/fonts/dejavu/DejaVuSans.ttf";
         }
 	
 	liqapp_log("TTF Font opening File %s, %i:",name,size);
